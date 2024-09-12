@@ -1,6 +1,21 @@
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
+  const spectacleSVGs = [
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M15,50 Q30,35 50,35 Q70,35 85,50" stroke="#000" fill="none" stroke-width="3"/><circle cx="30" cy="50" r="15" stroke="#000" fill="none" stroke-width="3"/><circle cx="70" cy="50" r="15" stroke="#000" fill="none" stroke-width="3"/></svg>`,
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="20" y="40" width="60" height="20" rx="10" stroke="#000" fill="none" stroke-width="3"/><circle cx="30" cy="50" r="15" stroke="#000" fill="none" stroke-width="3"/><circle cx="70" cy="50" r="15" stroke="#000" fill="none" stroke-width="3"/></svg>`,
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M15,50 Q30,30 50,30 Q70,30 85,50" stroke="#000" fill="none" stroke-width="3"/><rect x="15" y="35" width="30" height="30" rx="5" stroke="#000" fill="none" stroke-width="3"/><rect x="55" y="35" width="30" height="30" rx="5" stroke="#000" fill="none" stroke-width="3"/></svg>`,
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M15,50 Q30,40 50,40 Q70,40 85,50" stroke="#000" fill="none" stroke-width="3"/><ellipse cx="30" cy="50" rx="20" ry="15" stroke="#000" fill="none" stroke-width="3"/><ellipse cx="70" cy="50" rx="20" ry="15" stroke="#000" fill="none" stroke-width="3"/></svg>`
+  ];
+
+  const spectacleDescriptions = [
+    "Classic round frames, perfect for a sophisticated look.",
+    "Modern rectangular design, ideal for a professional setting.",
+    "Stylish cat-eye shape, adding a touch of vintage glamour.",
+    "Oversized frames for a bold, fashion-forward statement."
+  ];
+
   return (
     <div className="min-h-screen font-sans bg-[#FAF5F1] text-[#292F36]">
       <header className="bg-[#8F7A6E] text-white p-8">
@@ -18,10 +33,10 @@ export default function Home() {
           </div>
           <nav>
             <ul className="flex space-x-4">
-              <li><a href="#" className="hover:text-black transition-colors duration-300">Home</a></li>
-              <li><a href="#" className="hover:text-black transition-colors duration-300">Eyeglasses</a></li>
-              <li><a href="#" className="hover:text-black transition-colors duration-300">Rectangle Glasses</a></li>
-              <li><a href="#" className="hover:text-black transition-colors duration-300">Frederica</a></li>
+              <li><Link href="/" className="hover:text-black transition-colors duration-300">Home</Link></li>
+              <li><Link href="/eyeglasses" className="hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
+              <li><Link href="#" className="hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
+              <li><Link href="#" className="hover:text-black transition-colors duration-300">Frederica</Link></li>
             </ul>
           </nav>
         </div>
@@ -40,15 +55,15 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
                 <div key={num} className="flex flex-col items-center">
-                  <div className="relative w-full h-48 mb-2">
-                    <Image
-                      src={`https://picsum.photos/seed/${num}/300/200`}
+                  <div className="relative w-full h-48 mb-2 bg-white rounded-lg flex items-center justify-center group">
+                    <img
+                      src={`data:image/svg+xml,${encodeURIComponent(spectacleSVGs[num % 4])}`}
                       alt={`Spectacle model ${num}`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      style={{ objectFit: "cover" }}
-                      className="rounded-lg"
+                      className="w-3/4 h-3/4 object-contain"
                     />
+                    <div className="absolute inset-0 bg-black bg-opacity-75 text-white p-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center">
+                      {spectacleDescriptions[num % 4]}
+                    </div>
                   </div>
                   <p className="text-center">Spectacle model {num}</p>
                 </div>
