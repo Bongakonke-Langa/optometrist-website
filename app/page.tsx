@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 export default function Home() {
   const spectacleSVGs = [
@@ -17,7 +18,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen font-sans bg-[#FAF5F1] text-[#292F36]">
+    <div className="min-h-screen flex flex-col font-sans bg-[#FAF5F1] text-[#292F36]">
       <header className="bg-[#8F7A6E] text-white p-8">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center">
@@ -121,21 +122,60 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="relative py-12">
-          <div className="absolute inset-0 bg-[#E5D3B3] left-[calc(-50vw+50%)] right-[calc(-50vw+50%)]"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
-            <p>Phone: (011) 456-7890</p>
-            <p>Email: drbonga@drsmithoptometry.com</p>
-            <p>Address: 123 Eye Care Lane, Vision City, VC 12345</p>
-          </div>
-        </section>
+       
       </div>
 
-      <footer className="relative py-8 text-white">
-        <div className="absolute inset-0 bg-[#8F7A6E] left-[calc(-50vw+50%)] right-[calc(-50vw+50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          © 2023 Dr. Bonga's Optometry Clinic. All rights reserved.
+      <footer className="border-t bg-[#8F7A6E] text-white">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex flex-wrap justify-between">
+            <div className="w-full md:w-1/2 lg:w-1/3 mb-6 md:mb-0">
+              <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
+              <nav className="flex flex-col space-y-2">
+                <Link className="text-sm hover:underline" href="#">
+                  About Us
+                </Link>
+                <Link className="text-sm hover:underline" href="#">
+                  Contact
+                </Link>
+                <Link className="text-sm hover:underline" href="#">
+                  FAQs
+                </Link>
+                <Link className="text-sm hover:underline" href="#">
+                  Store Locator
+                </Link>
+              </nav>
+            </div>
+            
+            <div className="w-full md:w-1/2 lg:w-1/3 mb-6 md:mb-0">
+              <h2 className="text-xl font-semibold mb-4">Contact Info</h2>
+              <p className="text-sm">123 Eye Care Lane</p>
+              <p className="text-sm">Vision City, VC 12345</p>
+              <p className="text-sm">Phone: (011) 456-7890</p>
+              <p className="text-sm">Email: info@drbonga.com</p>
+            </div>
+
+            <div className="w-full md:w-1/2 lg:w-1/3 mb-6 md:mb-0">
+              <h2 className="text-xl font-semibold mb-4">Connect With Us</h2>
+              <div className="flex space-x-4">
+                <a href="#" className="p-2 rounded-full hover:bg-white hover:text-[#8F7A6E] transition-colors duration-300">
+                  <FaFacebook className="h-5 w-5" />
+                  <span className="sr-only">Facebook</span>
+                </a>
+                <a href="#" className="p-2 rounded-full hover:bg-white hover:text-[#8F7A6E] transition-colors duration-300">
+                  <FaTwitter className="h-5 w-5" />
+                  <span className="sr-only">Twitter</span>
+                </a>
+                <a href="#" className="p-2 rounded-full hover:bg-white hover:text-[#8F7A6E] transition-colors duration-300">
+                  <FaInstagram className="h-5 w-5" />
+                  <span className="sr-only">Instagram</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 border-t border-gray-700 pt-8 text-center text-sm">
+            <p>© 2023 Dr. Bonga's Optometry Clinic. All rights reserved.</p>
+          </div>
         </div>
       </footer>
     </div>
