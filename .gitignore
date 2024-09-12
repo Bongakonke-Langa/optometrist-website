@@ -1,0 +1,57 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+# Application
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+# Database (example for PostgreSQL)
+DATABASE_URL=postgresql://username:password@localhost:5432/your_database
+
+# Authentication (example for NextAuth.js)
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your_nextauth_secret
+
+# API Keys (examples)
+NEXT_PUBLIC_API_KEY=your_public_api_key
+API_SECRET_KEY=your_secret_api_key
+
+# External Services (examples)
+STRIPE_PUBLIC_KEY=your_stripe_public_key
+STRIPE_SECRET_KEY=your_stripe_secret_key
+
+# Feature Flags
+NEXT_PUBLIC_FEATURE_NEW_HOMEPAGE=true
