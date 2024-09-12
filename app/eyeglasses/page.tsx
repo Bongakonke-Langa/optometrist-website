@@ -23,7 +23,7 @@ export default function Eyeglasses() {
             <ul className="flex space-x-4">
               <li><Link href="/" className="hover:text-black transition-colors duration-300">Home</Link></li>
               <li><Link href="/eyeglasses" className="hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
-              <li><Link href="#" className="hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
+              <li><Link href="rectangleglasses" className="hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
               <li><Link href="#" className="hover:text-black transition-colors duration-300">Frederica</Link></li>
             </ul>
           </nav>
