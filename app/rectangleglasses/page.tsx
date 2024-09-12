@@ -4,22 +4,19 @@ import Image from 'next/image';
 
 // Add this array of glasses data
 const glasses = [
-    { id: 1, name: "Classic Rectangle", price: 129.99, image: "/images/spectacle1.jpg" },
-    { id: 2, name: "Modern Slim", price: 149.99, image: "/images/spectacle2.jpg" },
-    { id: 3, name: "Bold Frame", price: 159.99, image: "/images/spectacle3.JPG" },
-    { id: 1, name: "Small Rectangle", price: 179.99, image: "/images/spectacle4.jpg" },
-    { id: 2, name: "Old Slim", price: 119.99, image: "/images/spectacle5.JPG" },
-    { id: 3, name: "Silver Frame", price: 139.99, image: "/images/spectacle6.JPG" },
-
-    // Add more glasses as needed
-  ];
+    { id: 1, name: "Classic Rectangle", price: 399.99, image: "/images/spectacle1.jpg" },
+    { id: 2, name: "Modern Slim", price: 774.99, image: "/images/spectacle2.jpg" },
+    { id: 3, name: "Bold Frame", price: 959.99, image: "/images/spectacle3.JPG" },
+    { id: 4, name: "Small Rectangle", price: 329.99, image: "/images/spectacle4.jpg" },
+    { id: 5, name: "Old Slim", price: 219.99, image: "/images/spectacle5.JPG" },
+    { id: 6, name: "Silver Frame", price: 589.99, image: "/images/spectacle6.JPG" },
+];
 
 export default function RectangleGlasses() {
-   
     return (
-      <div className="min-h-screen flex flex-col font-sans bg-[#FAF5F1] text-[#292F36]">
-        <header className="bg-[#8F7A6E] text-white p-8">
-          <div className="flex items-center justify-between mb-4">
+      <div className="min-h-screen flex flex-col font-sans bg-[#FAF5F1] text-[#292F36] pt-20">
+        <header className="fixed top-0 left-0 right-0 bg-[#8F7A6E] text-white p-4 z-50">
+          <div className="container mx-auto flex items-center justify-between">
             <div className="flex items-center">
               <svg className="w-10 h-10 mr-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 7C6.88071 7 8 5.88071 8 4.5C8 3.11929 6.88071 2 5.5 2C4.11929 2 3 3.11929 3 4.5C3 5.88071 4.11929 7 5.5 7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -29,18 +26,17 @@ export default function RectangleGlasses() {
                 <path d="M18 14L20 15L22 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M6 14V17C6 19.2091 7.79086 21 10 21H14C16.2091 21 18 19.2091 18 17V14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              <h1 className="text-3xl font-bold">Dr. Bonga's Optometry Clinic</h1>
+              <h1 className="text-2xl font-bold">Dr. Bonga's Optometry Clinic</h1>
             </div>
             <nav>
               <ul className="flex space-x-4">
                 <li><Link href="/" className="hover:text-black transition-colors duration-300">Home</Link></li>
                 <li><Link href="/eyeglasses" className="hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
-                <li><Link href="rectangleglasses" className="hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
+                <li><Link href="/rectangleglasses" className="hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
                 <li><Link href="#" className="hover:text-black transition-colors duration-300">Frederica</Link></li>
               </ul>
             </nav>
           </div>
-         
         </header>
         
         <main className="flex-grow container mx-auto px-4 py-8">
@@ -77,10 +73,10 @@ export default function RectangleGlasses() {
                   <h3 className="text-xl font-semibold mb-2">{glass.name}</h3>
                   <p className="text-lg font-bold text-[#8F7A6E] mb-4">R{glass.price.toFixed(2)}</p>
                   <div className="flex space-x-2">
-                    <button className="flex-1 bg-[#EDDDD4] text-[#292F36] py-2 px-4 rounded-md hover:bg-[#E5D1C3] transition-colors duration-300">
+                    <button className="flex-1 bg-[#EDDDD4] text-[#292F36] py-2 px-4 rounded-md hover:bg-[#D5B195] transition-colors duration-300">
                       View Details
                     </button>
-                    <button className="flex-1 bg-[#E9E6DD] text-[#292F36] py-2 px-4 rounded-md hover:bg-[#E5D1C3] transition-colors duration-300">
+                    <button className="flex-1 bg-[#E9E6DD] text-[#292F36] py-2 px-4 rounded-md hover:bg-[#6A8283] transition-colors duration-300">
                       Add to Cart
                     </button>
                   </div>

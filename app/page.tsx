@@ -19,8 +19,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col font-sans bg-[#FAF5F1] text-[#292F36]">
-      <header className="bg-[#8F7A6E] text-white p-8">
-        <div className="flex items-center justify-between mb-4">
+      <header className="fixed top-0 left-0 right-0 bg-[#8F7A6E] text-white p-4 z-50">
+        <div className="container mx-auto flex items-center justify-between">
           <div className="flex items-center">
             <svg className="w-10 h-10 mr-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5.5 7C6.88071 7 8 5.88071 8 4.5C8 3.11929 6.88071 2 5.5 2C4.11929 2 3 3.11929 3 4.5C3 5.88071 4.11929 7 5.5 7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -30,25 +30,20 @@ export default function Home() {
               <path d="M18 14L20 15L22 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               <path d="M6 14V17C6 19.2091 7.79086 21 10 21H14C16.2091 21 18 19.2091 18 17V14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            <h1 className="text-3xl font-bold">Dr. Bonga's Optometry Clinic</h1>
+            <h1 className="text-2xl font-bold">Dr. Bonga's Optometry Clinic</h1>
           </div>
           <nav>
             <ul className="flex space-x-4">
               <li><Link href="/" className="hover:text-black transition-colors duration-300">Home</Link></li>
               <li><Link href="/eyeglasses" className="hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
-              <li><Link href="rectangleglasses" className="hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
+              <li><Link href="/rectangleglasses" className="hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
               <li><Link href="#" className="hover:text-black transition-colors duration-300">Frederica</Link></li>
             </ul>
           </nav>
         </div>
-        <div className="bg-[#8F7A6E] text-white py-8">
-          <p className="text-center max-w-3xl mx-auto px-4">
-            We provide comprehensive eye care services with state-of-the-art equipment and a patient-centered approach.
-          </p>
-        </div>
       </header>
       
-      <div>
+      <div className="pt-20">
         <section className="relative py-12">
           <div className="absolute inset-0 bg-[#D5C5B4] left-[calc(-50vw+50%)] right-[calc(-50vw+50%)]"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

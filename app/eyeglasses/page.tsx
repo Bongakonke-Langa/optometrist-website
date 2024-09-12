@@ -16,14 +16,19 @@ export default function Eyeglasses() {
 
   return (
     <div className="min-h-screen font-sans bg-[#FAF5F1] text-[#292F36]">
-      <header className="bg-[#8F7A6E] text-white p-8">
-        <div className="flex items-center justify-between mb-4">
-          <Link href="/" className="text-3xl font-bold">Dr. Bonga's Optometry Clinic</Link>
+      <header className="fixed top-0 left-0 right-0 bg-[#8F7A6E] text-white p-4 z-50">
+        <div className="container mx-auto flex items-center justify-between">
+          <div className="flex items-center">
+            <svg className="w-10 h-10 mr-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* ... SVG path ... */}
+            </svg>
+            <h1 className="text-2xl font-bold">Dr. Bonga's Optometry Clinic</h1>
+          </div>
           <nav>
             <ul className="flex space-x-4">
               <li><Link href="/" className="hover:text-black transition-colors duration-300">Home</Link></li>
               <li><Link href="/eyeglasses" className="hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
-              <li><Link href="rectangleglasses" className="hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
+              <li><Link href="/rectangleglasses" className="hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
               <li><Link href="#" className="hover:text-black transition-colors duration-300">Frederica</Link></li>
             </ul>
           </nav>
