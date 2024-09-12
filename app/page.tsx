@@ -1,24 +1,38 @@
 import Image from "next/image";
 
-
 export default function Home() {
   return (
     <div className="min-h-screen font-sans bg-[#FAF5F1] text-[#292F36]">
-      <header className="bg-[#8F7A6E] text-white p-8 mb-8">
-        <div className="flex items-center mb-4">
-          <svg className="w-10 h-10 mr-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.5 7C6.88071 7 8 5.88071 8 4.5C8 3.11929 6.88071 2 5.5 2C4.11929 2 3 3.11929 3 4.5C3 5.88071 4.11929 7 5.5 7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M18.5 7C19.8807 7 21 5.88071 21 4.5C21 3.11929 19.8807 2 18.5 2C17.1193 2 16 3.11929 16 4.5C16 5.88071 17.1193 7 18.5 7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M8 4.5H16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M2 14L4 15L6 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M18 14L20 15L22 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M6 14V17C6 19.2091 7.79086 21 10 21H14C16.2091 21 18 19.2091 18 17V14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-          <h1 className="text-3xl font-bold">Dr. Bonga's Optometry Clinic</h1>
+      <header className="bg-[#8F7A6E] text-white p-8">
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center">
+            <svg className="w-10 h-10 mr-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 7C6.88071 7 8 5.88071 8 4.5C8 3.11929 6.88071 2 5.5 2C4.11929 2 3 3.11929 3 4.5C3 5.88071 4.11929 7 5.5 7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M18.5 7C19.8807 7 21 5.88071 21 4.5C21 3.11929 19.8807 2 18.5 2C17.1193 2 16 3.11929 16 4.5C16 5.88071 17.1193 7 18.5 7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M8 4.5H16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M2 14L4 15L6 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M18 14L20 15L22 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M6 14V17C6 19.2091 7.79086 21 10 21H14C16.2091 21 18 19.2091 18 17V14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <h1 className="text-3xl font-bold">Dr. Bonga's Optometry Clinic</h1>
+          </div>
+          <nav>
+            <ul className="flex space-x-4">
+              <li><a href="#" className="hover:underline">Home</a></li>
+              <li><a href="#" className="hover:underline">Eyeglasses</a></li>
+              <li><a href="#" className="hover:underline">Rectangle Glasses</a></li>
+              <li><a href="#" className="hover:underline">Frederica</a></li>
+            </ul>
+          </nav>
         </div>
-        <p className="mb-8">Welcome to Dr. Bonga's Optometry Clinic. We provide comprehensive eye care services with state-of-the-art equipment and a patient-centered approach.</p>
       </header>
       
+      <div className="bg-[#8F7A6E] text-white py-8">
+        <p className="text-center max-w-3xl mx-auto px-4">
+          We provide comprehensive eye care services with state-of-the-art equipment and a patient-centered approach.
+        </p>
+      </div>
+
       <div className="p-8">
         <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-4">Our Collection</h2>
@@ -27,9 +41,10 @@ export default function Home() {
               <div key={num} className="flex flex-col items-center">
                 <div className="relative w-full h-48 mb-2">
                   <Image
-                    src={`/placeholder-image.jpg`}
+                    src={`/images/spectacle${num}.jpg`}
                     alt={`Spectacle model ${num}`}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     style={{ objectFit: "cover" }}
                     className="rounded-lg"
                   />
@@ -41,6 +56,39 @@ export default function Home() {
         </section>
 
         <main className="flex flex-col gap-8">
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">About Us</h2>
+            <div className="space-y-4">
+              <p>Welcome to Dr. Bonga's Optometry Clinic, where passion meets innovation in eye care.</p>
+              
+              <h3 className="text-xl font-semibold">Our Story</h3>
+              <p>Founded in 2010, Dr. Bonga's Optometry Clinic began with a simple yet powerful vision: to provide exceptional eye care with a personal touch. What started as a small practice has now grown into a trusted name in comprehensive eye health services.</p>
+              
+              <h3 className="text-xl font-semibold">Our Mission</h3>
+              <p>At Dr. Bonga's Optometry Clinic, we are committed to enhancing and preserving your vision for life. We believe in personalized care, cutting-edge technology, and patient education, which guide every decision we make and every service we offer.</p>
+              
+              <h3 className="text-xl font-semibold">What Sets Us Apart</h3>
+              <ul className="list-disc list-inside pl-4">
+                <li><span className="font-semibold">Innovation:</span> We're constantly pushing the boundaries of optometry to bring you cutting-edge diagnostic and treatment solutions.</li>
+                <li><span className="font-semibold">Quality:</span> Our unwavering commitment to excellence ensures that every eye exam, prescription, and treatment meets the highest standards.</li>
+                <li><span className="font-semibold">Patient-Centric:</span> Your eye health and satisfaction are our top priorities. We listen, adapt, and evolve based on your needs and feedback.</li>
+              </ul>
+              
+              <h3 className="text-xl font-semibold">Our Team</h3>
+              <p>Behind Dr. Bonga's Optometry Clinic is a diverse team of passionate eye care professionals. From our skilled optometrists to our knowledgeable opticians, each member brings unique expertise and perspective to your eye care experience.</p>
+              
+              <h3 className="text-xl font-semibold">Our Commitment</h3>
+              <p>We're not just a clinic; we're a part of the community. That's why we're dedicated to providing free eye screenings at local schools and participating in vision health awareness programs.</p>
+              
+              <h3 className="text-xl font-semibold">Join Us on Our Journey</h3>
+              <p>As we continue to grow and evolve, we invite you to be a part of our story. Whether you're a patient, partner, or future team member, there's a place for you in the Dr. Bonga's Optometry Clinic family.</p>
+              
+              <p>Thank you for considering Dr. Bonga's Optometry Clinic. We look forward to being your trusted partner in maintaining healthy vision for life.</p>
+              
+              <p className="font-semibold">Schedule your comprehensive eye exam today and experience the difference of personalized eye care.</p>
+            </div>
+          </section>
+
           <section>
             <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
             <ul className="list-disc list-inside">
