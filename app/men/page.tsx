@@ -8,7 +8,7 @@ import { FaXTwitter } from 'react-icons/fa6';  // Import the new X logo
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 // Add this array of men's glasses data
 const mensGlasses = [
-    { id: 1, name: "Classic Aviator", price: 499.99, image: "/images/mens-aviator.jpg" },
+    { id: 1, name: "Classic Aviator", price: 499.99, image: "/images/menglasses/men2.jpeg" },
     { id: 2, name: "Modern Wayfarer", price: 449.99, image: "/images/mens-wayfarer.jpg" },
     { id: 3, name: "Sleek Rectangular", price: 399.99, image: "/images/mens-rectangular.jpg" },
     { id: 4, name: "Sporty Wrap", price: 529.99, image: "/images/mens-wrap.jpg" },
