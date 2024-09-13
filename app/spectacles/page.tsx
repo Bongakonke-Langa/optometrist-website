@@ -70,16 +70,16 @@ export default function RectangleGlasses() {
           <div className="flex flex-col md:flex-row items-center justify-between mb-8">
             <h2 className="text-3xl font-bold text-center md:text-left">Spectacle Collection</h2>
             <nav className="mt-4 md:mt-0 flex gap-6">
-              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+              <Link className="text-sm font-medium hover:underline underline-offset-4" href="men">
                 Men
               </Link>
-              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+              <Link className="text-sm font-medium hover:underline underline-offset-4" href="women">
                 Women
               </Link>
-              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+              <Link className="text-sm font-medium hover:underline underline-offset-4" href="kids">
                 Kids
               </Link>
-              <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+              <Link className="text-sm font-medium hover:underline underline-offset-4" href="sunglasses">
                 Sunglasses
               </Link>
             </nav>
