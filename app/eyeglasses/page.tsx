@@ -2,9 +2,10 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { useState } from 'react';
 import { FaXTwitter } from 'react-icons/fa6';  // Import the new X logo
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+
 
 
 export default function Eyeglasses() {
@@ -150,6 +151,10 @@ export default function Eyeglasses() {
                   <FaInstagram className="h-5 w-5" />
                   <span className="sr-only">Instagram</span>
                 </a>
+                <a href="#" className="p-2 rounded-full hover:bg-white hover:text-[#8F7A6E] transition-colors duration-300">
+                <FaWhatsapp className="h-5 w-5" />
+                <span className="sr-only">WhatsApp</span>
+              </a>
               </div>
             </div>
           </div>

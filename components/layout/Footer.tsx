@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';  // Import the new X logo
 
 export default function Footer() {
@@ -40,6 +40,10 @@ export default function Footer() {
               <a href="#" className="p-2 rounded-full hover:bg-white hover:text-[#8F7A6E] transition-colors duration-300">
                 <FaInstagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
+              </a>
+              <a href="#" className="p-2 rounded-full hover:bg-white hover:text-[#8F7A6E] transition-colors duration-300">
+                <FaWhatsapp className="h-5 w-5" />
+                <span className="sr-only">WhatsApp</span>
               </a>
             </div>
           </div>
