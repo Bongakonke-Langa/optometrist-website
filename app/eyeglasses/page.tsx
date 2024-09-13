@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
@@ -24,6 +26,8 @@ export default function Eyeglasses() {
             </svg>
             <h1 className="text-2xl font-bold">Dr. Bonga's Optometry Clinic</h1>
           </div>
+
+          
           <nav>
             <ul className="flex space-x-4">
               <li><Link href="/" className="hover:text-black transition-colors duration-300">Home</Link></li>
