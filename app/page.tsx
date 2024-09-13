@@ -24,57 +24,50 @@ export default function RectangleGlasses() {
 
   return (
     <div className="min-h-screen flex flex-col font-sans bg-[#FAF5F1] text-[#292F36]">
-      <header className="fixed top-0 left-0 right-0 bg-[#8F7A6E] text-white z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <svg className="w-10 h-10 mr-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.5 7C6.88071 7 8 5.88071 8 4.5C8 3.11929 6.88071 2 5.5 2C4.11929 2 3 3.11929 3 4.5C3 5.88071 4.11929 7 5.5 7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M18.5 7C19.8807 7 21 5.88071 21 4.5C21 3.11929 19.8807 2 18.5 2C17.1193 2 16 3.11929 16 4.5C16 5.88071 17.1193 7 18.5 7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M8 4.5H16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M2 14L4 15L6 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M18 14L20 15L22 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M6 14V17C6 19.2091 7.79086 21 10 21H14C16.2091 21 18 19.2091 18 17V14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <h1 className="text-2xl font-bold">Dr. Bonga's Optometry Clinic</h1>
-            </div>
-            
-            {/* Hamburger menu button for small screens */}
-            <button 
-              className="md:hidden p-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-
-            {/* Navigation for larger screens */}
-            <nav className="hidden md:block">
-              <ul className="flex space-x-4">
-                <li><Link href="/" className="hover:text-black transition-colors duration-300">Home</Link></li>
-                <li><Link href="/eyeglasses" className="hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
-                <li><Link href="/rectangleglasses" className="hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
-                <li><Link href="#" className="hover:text-black transition-colors duration-300">Frederica</Link></li>
-              </ul>
-            </nav>
+      <header className="fixed top-0 left-0 right-0 bg-[#8F7A6E] text-white p-2 z-50">
+        <div className="container mx-auto flex items-center justify-between">
+          <div className="flex items-center">
+            <svg className="w-10 h-10 mr-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" fill="currentColor"/>
+            </svg>
+            <h1 className="text-2xl font-bold">Dr. Bonga's Optometry Clinic</h1>
           </div>
+          
+          {/* Hamburger menu button for small screens */}
+          <button 
+            className="md:hidden p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
 
-          {/* Mobile menu */}
-          {isMenuOpen && (
-            <nav className="md:hidden mt-4">
-              <ul className="flex flex-col space-y-2">
-                <li><Link href="/" className="block py-2 hover:text-black transition-colors duration-300">Home</Link></li>
-                <li><Link href="/eyeglasses" className="block py-2 hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
-                <li><Link href="/rectangleglasses" className="block py-2 hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
-                <li><Link href="#" className="block py-2 hover:text-black transition-colors duration-300">Frederica</Link></li>
-              </ul>
-            </nav>
-          )}
+          {/* Navigation for larger screens */}
+          <nav className="hidden md:block">
+            <ul className="flex space-x-4">
+              <li><Link href="/" className="hover:text-black transition-colors duration-300">Home</Link></li>
+              <li><Link href="/eyeglasses" className="hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
+              <li><Link href="/rectangleglasses" className="hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
+              <li><Link href="#" className="hover:text-black transition-colors duration-300">Frederica</Link></li>
+            </ul>
+          </nav>
         </div>
+
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <nav className="md:hidden mt-4">
+            <ul className="flex flex-col space-y-2">
+              <li><Link href="/" className="block py-2 hover:text-black transition-colors duration-300">Home</Link></li>
+              <li><Link href="/eyeglasses" className="block py-2 hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
+              <li><Link href="/rectangleglasses" className="block py-2 hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
+              <li><Link href="#" className="block py-2 hover:text-black transition-colors duration-300">Frederica</Link></li>
+            </ul>
+          </nav>
+        )}
       </header>
       
-      <div className="pt-[64px]">
+      <div className="pt-[10px]">
         <section className="relative py-12">
           <div className="absolute inset-0 bg-[#D5C5B4] left-[calc(-50vw+50%)] right-[calc(-50vw+50%)]"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
