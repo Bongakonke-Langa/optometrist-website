@@ -4,15 +4,16 @@ import Image from "next/image";
 import Link from 'next/link';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { useState } from 'react';
+import { FaXTwitter } from 'react-icons/fa6';  // Import the new X logo
 
 export default function RectangleGlasses() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const spectacleSVGs = [
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M15,50 Q30,35 50,35 Q70,35 85,50" stroke="#000" fill="none" stroke-width="3"/><circle cx="30" cy="50" r="15" stroke="#000" fill="none" stroke-width="3"/><circle cx="70" cy="50" r="15" stroke="#000" fill="none" stroke-width="3"/></svg>`,
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="20" y="40" width="60" height="20" rx="10" stroke="#000" fill="none" stroke-width="3"/><circle cx="30" cy="50" r="15" stroke="#000" fill="none" stroke-width="3"/><circle cx="70" cy="50" r="15" stroke="#000" fill="none" stroke-width="3"/></svg>`,
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M15,50 Q30,30 50,30 Q70,30 85,50" stroke="#000" fill="none" stroke-width="3"/><rect x="15" y="35" width="30" height="30" rx="5" stroke="#000" fill="none" stroke-width="3"/><rect x="55" y="35" width="30" height="30" rx="5" stroke="#000" fill="none" stroke-width="3"/></svg>`,
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M15,50 Q30,40 50,40 Q70,40 85,50" stroke="#000" fill="none" stroke-width="3"/><ellipse cx="30" cy="50" rx="20" ry="15" stroke="#000" fill="none" stroke-width="3"/><ellipse cx="70" cy="50" rx="20" ry="15" stroke="#000" fill="none" stroke-width="3"/></svg>`
+  const spectacleImages = [
+    '/spectacle1.jpg',
+    '/spectacle2.jpg',
+    '/spectacle3.jpg',
+    '/spectacle4.jpg',
   ];
 
   const spectacleDescriptions = [
@@ -48,8 +49,8 @@ export default function RectangleGlasses() {
             <ul className="flex space-x-4">
               <li><Link href="/" className="hover:text-black transition-colors duration-300">Home</Link></li>
               <li><Link href="/eyeglasses" className="hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
-              <li><Link href="/rectangleglasses" className="hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
-              <li><Link href="#" className="hover:text-black transition-colors duration-300">Frederica</Link></li>
+              <li><Link href="/spectacles" className="hover:text-black transition-colors duration-300">Spectacles</Link></li>
+              <li><Link href="aboutus" className="hover:text-black transition-colors duration-300">About us</Link></li>
             </ul>
           </nav>
         </div>
@@ -60,8 +61,8 @@ export default function RectangleGlasses() {
             <ul className="flex flex-col space-y-2">
               <li><Link href="/" className="block py-2 hover:text-black transition-colors duration-300">Home</Link></li>
               <li><Link href="/eyeglasses" className="block py-2 hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
-              <li><Link href="/rectangleglasses" className="block py-2 hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
-              <li><Link href="#" className="block py-2 hover:text-black transition-colors duration-300">Frederica</Link></li>
+              <li><Link href="/spectacles" className="block py-2 hover:text-black transition-colors duration-300">Spectacles</Link></li>
+              <li><Link href="aboutus" className="block py-2 hover:text-black transition-colors duration-300">About us</Link></li>
             </ul>
           </nav>
         )}
@@ -76,10 +77,12 @@ export default function RectangleGlasses() {
               {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
                 <div key={num} className="flex flex-col items-center">
                   <div className="relative w-full h-48 mb-2 bg-white rounded-lg flex items-center justify-center group">
-                    <img
-                      src={`data:image/svg+xml,${encodeURIComponent(spectacleSVGs[num % 4])}`}
+                    <Image
+                      src={spectacleImages[num % 4]}
                       alt={`Spectacle model ${num}`}
-                      className="w-3/4 h-3/4 object-contain"
+                      width={200}
+                      height={150}
+                      objectFit="contain"
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-75 text-white p-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center">
                       {spectacleDescriptions[num % 4]}
@@ -181,8 +184,8 @@ export default function RectangleGlasses() {
                   <span className="sr-only">Facebook</span>
                 </a>
                 <a href="#" className="p-2 rounded-full hover:bg-white hover:text-[#8F7A6E] transition-colors duration-300">
-                  <FaTwitter className="h-5 w-5" />
-                  <span className="sr-only">Twitter</span>
+                  <FaXTwitter className="h-5 w-5" />  {/* Updated Twitter/X icon */}
+                  <span className="sr-only">X (Twitter)</span>
                 </a>
                 <a href="#" className="p-2 rounded-full hover:bg-white hover:text-[#8F7A6E] transition-colors duration-300">
                   <FaInstagram className="h-5 w-5" />

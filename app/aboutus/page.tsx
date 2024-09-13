@@ -3,22 +3,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
-import { useState } from 'react';
 import { FaXTwitter } from 'react-icons/fa6';  // Import the new X logo
 
 
-export default function Eyeglasses() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const eyeglassCategories = [
-    { name: "Men's Glasses", description: "Stylish and durable frames for men" },
-    { name: "Women's Glasses", description: "Elegant and fashionable frames for women" },
-    { name: "Kids' Glasses", description: "Fun and sturdy frames for children" },
-    { name: "Unisex Glasses", description: "Versatile frames suitable for everyone" },
-  ];
-
-  const popularStyles = [
-    "Rectangle", "Oval", "Round", "Square", "Cat Eye", "Aviator", "Wayfarer", "Rimless"
-  ];
+export default function AboutUs() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
     <div className="min-h-screen font-sans bg-[#FAF5F1] text-[#292F36]">
@@ -31,7 +20,6 @@ export default function Eyeglasses() {
             <h1 className="text-2xl font-bold">Dr. Bonga's Optometry Clinic</h1>
           </div>
 
-          {/* Hamburger menu button for small screens */}
           <button 
             className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -41,89 +29,56 @@ export default function Eyeglasses() {
             </svg>
           </button>
 
-          {/* Navigation for larger screens */}
           <nav className="hidden md:block">
             <ul className="flex space-x-4">
               <li><Link href="/" className="hover:text-black transition-colors duration-300">Home</Link></li>
               <li><Link href="/eyeglasses" className="hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
               <li><Link href="/spectacles" className="hover:text-black transition-colors duration-300">Spectacles</Link></li>
-              <li><Link href="aboutus" className="hover:text-black transition-colors duration-300">About us</Link></li>
+              <li><Link href="/aboutus" className="hover:text-black transition-colors duration-300">About Us</Link></li>
             </ul>
           </nav>
         </div>
 
-        {/* Mobile menu */}
         {isMenuOpen && (
           <nav className="md:hidden mt-4">
             <ul className="flex flex-col space-y-2">
               <li><Link href="/" className="block py-2 hover:text-black transition-colors duration-300">Home</Link></li>
               <li><Link href="/eyeglasses" className="block py-2 hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
               <li><Link href="/spectacles" className="block py-2 hover:text-black transition-colors duration-300">Spectacles</Link></li>
-              <li><Link href="aboutus" className="block py-2 hover:text-black transition-colors duration-300">About us</Link></li>
+              <li><Link href="/aboutus" className="block py-2 hover:text-black transition-colors duration-300">About Us</Link></li>
             </ul>
           </nav>
         )}
       </header>
 
-      <main className="p-8 px-5 md:px-20 lg:px-[120px] 3xl:px-[200px] 4xl:px-[300px]">
-        <h1 className="text-4xl font-bold mb-8">Glasses Collection</h1>
-
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Categories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {eyeglassCategories.map((category, index) => (
-              <React.Fragment key={index}>
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-semibold mb-2">{category.name}</h3>
-                  <p>{category.description}</p>
-                </div>
-              </React.Fragment>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Popular Styles</h2>
-          <div className="flex flex-wrap gap-4">
-            {popularStyles.map((style, index) => (
-              <span key={index} className="bg-[#E9E6DD] text-[#292F36] px-4 py-2 rounded-full">
-                {style}
-              </span>
-            ))}
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">Why Choose Our Eyeglasses?</h2>
-          <ul className="list-disc list-inside space-y-2">
-            <li>High-quality materials for durability and comfort</li>
-            <li>Wide range of styles to suit every face shape and personal preference</li>
-            <li>Affordable options without compromising on quality</li>
-            <li>Expert fitting service to ensure perfect fit</li>
-            <li>UV protection options available for all glasses</li>
-            <li>Customizable lens options (anti-glare, blue light filtering, etc.)</li>
-          </ul>
+      <main className="pt-20 p-8 ">
+        <section className="max-w-4xl px-5 md:px-20 lg:px-[120px] 3xl:px-[200px] 4xl:px-[300px]">
+          <h2 className="text-3xl font-bold mb-6">About Us</h2>
+          <p className="mb-4">
+            At Dr. Bonga's Optometry Clinic, we are dedicated to providing top-notch eye care services and stylish eyewear solutions. With years of experience and a passion for ocular health, our team of skilled optometrists and friendly staff are committed to ensuring your visual well-being.
+          </p>
+          <p className="mb-4">
+            Our state-of-the-art facility is equipped with the latest technology in eye care, allowing us to offer comprehensive eye exams, diagnose and treat various eye conditions, and prescribe the perfect corrective lenses for your unique needs.
+          </p>
+          <p className="mb-4">
+            We take pride in our wide selection of eyewear, featuring both designer brands and affordable options to suit every style and budget. From trendy frames to specialized lenses, we have something for everyone.
+          </p>
+          <p>
+            Your vision is our priority, and we strive to make every visit to our clinic a pleasant and informative experience. Trust Dr. Bonga's Optometry Clinic for all your eye care needs – because your eyes deserve the best!
+          </p>
         </section>
       </main>
 
-      <footer className="border-t bg-[#8F7A6E] text-white">
+      <footer className="border-t bg-[#8F7A6E] text-white mt-12 ">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-wrap justify-between">
             <div className="w-full md:w-1/2 lg:w-1/3 mb-6 md:mb-0">
               <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
               <nav className="flex flex-col space-y-2">
-                <Link className="text-sm hover:underline" href="#">
-                  About Us
-                </Link>
-                <Link className="text-sm hover:underline" href="#">
-                  Contact
-                </Link>
-                <Link className="text-sm hover:underline" href="#">
-                  FAQs
-                </Link>
-                <Link className="text-sm hover:underline" href="#">
-                  Store Locator
-                </Link>
+                <Link className="text-sm hover:underline" href="/">Home</Link>
+                <Link className="text-sm hover:underline" href="/eyeglasses">Eyeglasses</Link>
+                <Link className="text-sm hover:underline" href="/rectangleglasses">Spectacles</Link>
+                <Link className="text-sm hover:underline" href="/aboutus">About Us</Link>
               </nav>
             </div>
             

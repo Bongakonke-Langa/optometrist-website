@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';  // Import the new X logo
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -20,7 +21,7 @@ export default function RectangleGlasses() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
       <div className="min-h-screen flex flex-col font-sans bg-[#FAF5F1] text-[#292F36] pt-20 ">
-        <header className="fixed top-0 left-0 right-0 bg-[#8F7A6E] text-white p-4 z-50">
+        <header className="fixed top-0 left-0 right-0 bg-[#8F7A6E] text-white p-2 z-50">
           <div className="container mx-auto flex items-center justify-between">
             <div className="flex items-center">
               <svg className="w-10 h-10 mr-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,8 +46,8 @@ export default function RectangleGlasses() {
               <ul className="flex space-x-4">
                 <li><Link href="/" className="hover:text-black transition-colors duration-300">Home</Link></li>
                 <li><Link href="/eyeglasses" className="hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
-                <li><Link href="/rectangleglasses" className="hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
-                <li><Link href="#" className="hover:text-black transition-colors duration-300">Frederica</Link></li>
+                <li><Link href="/spectacles" className="hover:text-black transition-colors duration-300">Spectacles</Link></li>
+                <li><Link href="aboutus" className="hover:text-black transition-colors duration-300">About us</Link></li>
               </ul>
             </nav>
           </div>
@@ -57,8 +58,8 @@ export default function RectangleGlasses() {
               <ul className="flex flex-col space-y-2">
                 <li><Link href="/" className="block py-2 hover:text-black transition-colors duration-300">Home</Link></li>
                 <li><Link href="/eyeglasses" className="block py-2 hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
-                <li><Link href="/rectangleglasses" className="block py-2 hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
-                <li><Link href="#" className="block py-2 hover:text-black transition-colors duration-300">Frederica</Link></li>
+                <li><Link href="/spectacles" className="block py-2 hover:text-black transition-colors duration-300">Spectacles</Link></li>
+                <li><Link href="aboutus" className="block py-2 hover:text-black transition-colors duration-300">About us</Link></li>
               </ul>
             </nav>
           )}
@@ -67,7 +68,7 @@ export default function RectangleGlasses() {
         
         <main className="flex-grow container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-center md:text-left">Glasses Collection</h2>
+            <h2 className="text-3xl font-bold text-center md:text-left">Spectacle Collection</h2>
             <nav className="mt-4 md:mt-0 flex gap-6">
               <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
                 Men
@@ -177,8 +178,8 @@ export default function RectangleGlasses() {
                   <span className="sr-only">Facebook</span>
                 </a>
                 <a href="#" className="p-2 rounded-full hover:bg-white hover:text-[#8F7A6E] transition-colors duration-300">
-                  <FaTwitter className="h-5 w-5" />
-                  <span className="sr-only">Twitter</span>
+                  <FaXTwitter className="h-5 w-5" />  {/* Updated Twitter/X icon */}
+                  <span className="sr-only">X (Twitter)</span>
                 </a>
                 <a href="#" className="p-2 rounded-full hover:bg-white hover:text-[#8F7A6E] transition-colors duration-300">
                   <FaInstagram className="h-5 w-5" />

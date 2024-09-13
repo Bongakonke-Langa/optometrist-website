@@ -1,5 +1,7 @@
+import React from 'react';
 import Link from 'next/link';
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';  // Import the new X logo
 
 export default function Footer() {
   return (
@@ -9,18 +11,10 @@ export default function Footer() {
           <div className="w-full md:w-1/2 lg:w-1/3 mb-6 md:mb-0">
             <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
             <nav className="flex flex-col space-y-2">
-              <Link className="text-sm hover:underline" href="/">
-                Home
-              </Link>
-              <Link className="text-sm hover:underline" href="/about">
-                About Us
-              </Link>
-              <Link className="text-sm hover:underline" href="/contact">
-                Contact
-              </Link>
-              <Link className="text-sm hover:underline" href="/faqs">
-                FAQs
-              </Link>
+              <Link className="text-sm hover:underline" href="/">Home</Link>
+              <Link className="text-sm hover:underline" href="/eyeglasses">Eyeglasses</Link>
+              <Link className="text-sm hover:underline" href="/rectangleglasses">Rectangle Glasses</Link>
+              <Link className="text-sm hover:underline" href="/aboutus">About Us</Link>
             </nav>
           </div>
           
@@ -40,8 +34,8 @@ export default function Footer() {
                 <span className="sr-only">Facebook</span>
               </a>
               <a href="#" className="p-2 rounded-full hover:bg-white hover:text-[#8F7A6E] transition-colors duration-300">
-                <FaTwitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
+                <FaXTwitter className="h-5 w-5" />  {/* Updated Twitter/X icon */}
+                <span className="sr-only">X (Twitter)</span>
               </a>
               <a href="#" className="p-2 rounded-full hover:bg-white hover:text-[#8F7A6E] transition-colors duration-300">
                 <FaInstagram className="h-5 w-5" />
