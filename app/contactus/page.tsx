@@ -53,28 +53,28 @@ export default function Contact() {
           </nav>
         )}
       </header>
-      <h1 className="text-4xl font-bold text-center mb-16 text-[#8F7A6E]">Contact Us</h1>  
+      <h1 className="text-4xl font-bold text-center mb-32 text-[#8F7A6E]">Contact Us</h1>  // Increased margin-bottom to move text down further
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="bg-[#EDDDD4] p-6 rounded-lg shadow-md space-y-4">  
           <h2 className="text-2xl font-semibold text-[#8F7A6E]">Get in Touch</h2>
-          <p>We're here to answer any questions you may have about our services. Reach out to us and we'll respond as soon as we can.</p>
+          <p className="text-[#8F7A6E]">We're here to answer any questions you may have about our services. Reach out to us and we'll respond as soon as we can.</p>
           <div>
-            <h3 className="font-semibold">Address:</h3>
-            <p>123 Eye Street, Vision City, VC 12345</p>
+            <h3 className="font-semibold text-[#8F7A6E]">Address:</h3>
+            <p className="text-[#8F7A6E]">123 Eye Street, Vision City, VC 12345</p>
           </div>
           <div>
-            <h3 className="font-semibold">Phone:</h3>
-            <p>(123) 456-7890</p>
+            <h3 className="font-semibold text-[#8F7A6E]">Phone:</h3>
+            <p className="text-[#8F7A6E]">(123) 456-7890</p>
           </div>
           <div>
-            <h3 className="font-semibold">Email:</h3>
-            <p>info@eyecareclinic.com</p>
+            <h3 className="font-semibold text-[#8F7A6E]">Email:</h3>
+            <p className="text-[#8F7A6E]">info@eyecareclinic.com</p>
           </div>
           <div>
-            <h3 className="font-semibold">Hours:</h3>
-            <p>Monday - Friday: 9am - 5pm</p>
-            <p>Saturday: 10am - 2pm</p>
-            <p>Sunday: Closed</p>
+            <h3 className="font-semibold text-[#8F7A6E]">Hours:</h3>
+            <p className="text-[#8F7A6E]">Monday - Friday: 9am - 5pm</p>
+            <p className="text-[#8F7A6E]">Saturday: 10am - 2pm</p>
+            <p className="text-[#8F7A6E]">Sunday: Closed</p>
           </div>
         </div>
        
