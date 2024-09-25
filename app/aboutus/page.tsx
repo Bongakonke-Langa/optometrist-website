@@ -67,6 +67,8 @@ export default function AboutUs() {
             Your vision is our priority, and we strive to make every visit to our clinic a pleasant and informative experience. Trust Dr. Bonga's Optometry Clinic for all your eye care needs – because your eyes deserve the best!
           </p>
         </section>
+
+        
       </main>
 
       <footer className="border-t bg-[#8F7A6E] text-white mt-12 ">
@@ -98,7 +100,7 @@ export default function AboutUs() {
                   <span className="sr-only">Facebook</span>
                 </a>
                 <a href="#" className="p-2 rounded-full hover:bg-white hover:text-[#8F7A6E] transition-colors duration-300">
-                  <FaXTwitter className="h-5 w-5" />  {/* Updated Twitter/X icon */}
+                  <FaXTwitter className="h-5 w-5" />
                   <span className="sr-only">X (Twitter)</span>
                 </a>
                 <a href="#" className="p-2 rounded-full hover:bg-white hover:text-[#8F7A6E] transition-colors duration-300">
