@@ -42,7 +42,7 @@ const KidsGlasses: React.FC = () => {
             <ul className="flex space-x-4">
               <li><Link href="/" className="hover:text-black transition-colors duration-300">Home</Link></li>
               <li><Link href="/eyeglasses" className="hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
-              <li><Link href="/rectangleglasses" className="hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
+              <li><Link href="/spectacles" className="hover:text-black transition-colors duration-300">Spectacles</Link></li>
               <li><Link href="/aboutus" className="hover:text-black transition-colors duration-300">About Us</Link></li>
             </ul>
           </nav>
@@ -53,7 +53,7 @@ const KidsGlasses: React.FC = () => {
             <ul className="flex flex-col space-y-2">
               <li><Link href="/" className="block py-2 hover:text-black transition-colors duration-300">Home</Link></li>
               <li><Link href="/eyeglasses" className="block py-2 hover:text-black transition-colors duration-300">Eyeglasses</Link></li>
-              <li><Link href="/rectangleglasses" className="block py-2 hover:text-black transition-colors duration-300">Rectangle Glasses</Link></li>
+              <li><Link href="/spectacles" className="block py-2 hover:text-black transition-colors duration-300">Spectacles</Link></li>
               <li><Link href="/aboutus" className="block py-2 hover:text-black transition-colors duration-300">About Us</Link></li>
             </ul>
           </nav>
