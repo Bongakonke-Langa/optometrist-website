@@ -127,10 +127,10 @@ const MensGlasses: React.FC = () => {
             <div className="w-full md:w-1/2 lg:w-1/3 mb-6 md:mb-0">
               <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
               <nav className="flex flex-col space-y-2">
-                <Link className="text-sm hover:underline" href="#">
+                <Link className="text-sm hover:underline" href="aboutus">
                   About Us
                 </Link>
-                <Link className="text-sm hover:underline" href="#">
+                <Link className="text-sm hover:underline" href="contactus">
                   Contact
                 </Link>
                 <Link className="text-sm hover:underline" href="#">

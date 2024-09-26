@@ -79,7 +79,7 @@ export default function AboutUs() {
               <nav className="flex flex-col space-y-2">
                 <Link className="text-sm hover:underline" href="/">Home</Link>
                 <Link className="text-sm hover:underline" href="/eyeglasses">Eyeglasses</Link>
-                <Link className="text-sm hover:underline" href="/rectangleglasses">Spectacles</Link>
+                <Link className="text-sm hover:underline" href="/contactus">Contact</Link>
                 <Link className="text-sm hover:underline" href="/aboutus">About Us</Link>
               </nav>
             </div>
