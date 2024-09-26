@@ -11,7 +11,7 @@ export default function Contact() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     
     return (
-      <div className="min-h-screen font-sans bg-[#FAF5F1] text-[#292F36]">
+      <div className="flex flex-col min-h-screen font-sans bg-[#FAF5F1] text-[#292F36]">
         <header className="fixed top-0 left-0 right-0 bg-[#8F7A6E] text-white p-2 z-50">
           <div className="container mx-auto flex items-center justify-between">
             <div className="flex items-center">
@@ -52,7 +52,7 @@ export default function Contact() {
           )}
         </header>
   
-        <main className=" pt-20 p-8">
+        <main className="flex-grow pt-20 p-8">
           <section className="max-w-4xl px-5 md:px-20 lg:px-[120px] 3xl:px-[200px] 4xl:px-[300px]">
             <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
             <p className="mb-4">
@@ -76,10 +76,10 @@ export default function Contact() {
           </section>
         </main>
        
-        <footer className=" border-t bg-[#8F7A6E] text-white mt-12 w-full">  
-          <div className="px-4 py-8">  
+        <footer className="border-t bg-[#8F7A6E] text-white mt-12 w-full">
+          <div className="max-w-6xl mx-auto px-4 py-8">  
             <div className="flex flex-wrap justify-between">
-              <div className="w-full md:w-1/2 lg:w-1/3 mb-6 md:mb-0">
+              <div className="w-full md:w-1/3 mb-6 md:mb-0">  
                 <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
                 <nav className="flex flex-col space-y-2">
                   <Link className="text-sm hover:underline" href="/">Home</Link>
@@ -89,7 +89,7 @@ export default function Contact() {
                 </nav>
               </div>
               
-              <div className="w-full md:w-1/2 lg:w-1/3 mb-6 md:mb-0">
+              <div className="w-full md:w-1/3 mb-6 md:mb-0">  
                 <h2 className="text-xl font-semibold mb-4">Contact Info</h2>
                 <p className="text-sm">123 Eye Care Lane</p>
                 <p className="text-sm">Vision City, VC 12345</p>
@@ -97,7 +97,7 @@ export default function Contact() {
                 <p className="text-sm">Email: info@drbonga.com</p>
               </div>
   
-              <div className="w-full md:w-1/2 lg:w-1/3 mb-6 md:mb-0">
+              <div className="w-full md:w-1/3 mb-6 md:mb-0">  
                 <h2 className="text-xl font-semibold mb-4">Connect With Us</h2>
                 <div className="flex space-x-4">
                   <a href="#" className="p-2 rounded-full hover:bg-white hover:text-[#8F7A6E] transition-colors duration-300">
@@ -125,7 +125,6 @@ export default function Contact() {
             </div>
           </div>
         </footer>
-        
       </div>
     );
   }
