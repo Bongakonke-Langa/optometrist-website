@@ -62,13 +62,13 @@ export default function Contact() {
               You can contact us via phone, email, or by visiting our clinic. Our friendly staff is here to assist you with any inquiries you may have.
             </p>
             <p className="mb-4">
-              Address: 456 New Vision Ave, Sight City, SC 67890
+              Address: Vision City, VC 12345
             </p>
             <p className="mb-4">
-              Phone: (987) 654-3210
+              Phone: (011) 456-7890
             </p>
             <p className="mb-4">
-              Email: contact@newvisionclinic.com
+              Email: info@drbonga.com
             </p>
             <p>
               We look forward to assisting you with your eye care needs!
