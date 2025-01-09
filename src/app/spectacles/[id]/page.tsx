@@ -19,7 +19,21 @@ export default function SpectacleDetails({ params }: { params: { id: string } })
   const [quantity, setQuantity] = useState(1);
 
   if (!spectacle) {
-    return <div>Spectacle not found</div>;
+    return (
+      <div className="min-h-screen flex flex-col font-sans bg-[#FAF5F1] text-[#292F36]">
+        <Header />
+        <main className="flex-grow container mx-auto px-4 py-8">
+          <h1 className="text-3xl font-bold mb-6">Spectacle not found</h1>
+          <button
+            onClick={() => router.push('/spectacles')}
+            className="bg-[#8F7A6E] text-white py-2 px-4 rounded hover:bg-[#7A6A5F] transition-colors duration-300"
+          >
+            Go Back
+          </button>
+        </main>
+        <Footer />
+      </div>
+    );
   }
 
   const handlePurchase = () => {
@@ -46,7 +60,7 @@ export default function SpectacleDetails({ params }: { params: { id: string } })
               </div>
             </div>
             <div className="p-8">
-              <h1 className="text-3xl font-bold mb-2">{spectacle.name}</h1>
+              <h1 className="text-3xl font-bold mb-6">{spectacle.name}</h1>
               <p className="text-gray-600 mb-4">{spectacle.description}</p>
               <p className="text-2xl font-bold mb-4">R {spectacle.price.toFixed(2)}</p>
               <div className="flex items-center mb-4">
@@ -74,4 +88,3 @@ export default function SpectacleDetails({ params }: { params: { id: string } })
     </div>
   );
 }
-
