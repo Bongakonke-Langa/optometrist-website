@@ -4,16 +4,11 @@ import Image from "next/image";
 import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import products from '../../data/products.json'
 
 export default function Spectacles() {
 
-  const products = [
-    { id: 1, name: "Classic Round", price: 2299.99, image: "/spectacles/classic-round.jpg", description: "Classic round frames, perfect for a sophisticated look." },
-    { id: 2, name: "Modern Rectangle", price: 2499.99, image: "/spectacles/modern-rectangle.jpg", description: "Modern rectangular design, ideal for a professional setting." },
-    { id: 3, name: "Vintage Cat-Eye", price: 2399.99, image: "/spectacles/vintage-cat-eye.jpg", description: "Stylish cat-eye shape, adding a touch of vintage glamour." },
-    { id: 4, name: "Bold Oversized", price: 2599.99, image: "/spectacles/bold-oversized.jpg", description: "Oversized frames for a bold, fashion-forward statement." },
-  ];
-
+ 
   return (
     <div className="min-h-screen flex flex-col font-sans bg-[#FAF5F1] text-[#292F36]">
       <Header />
