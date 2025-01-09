@@ -34,8 +34,6 @@ export default function RectangleGlasses() {
             </svg>
             <h1 className="text-2xl font-bold">Dr. Bonga's Optometry Clinic</h1>
           </div>
-
-          {/* Hamburger menu button for small screens */}
           <button
             className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -44,8 +42,6 @@ export default function RectangleGlasses() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-
-          {/* Navigation for larger screens */}
           <nav className="hidden md:block">
             <ul className="flex space-x-4">
               <li><Link href="/" className="hover:text-black transition-colors duration-300">Home</Link></li>
@@ -55,8 +51,6 @@ export default function RectangleGlasses() {
             </ul>
           </nav>
         </div>
-
-        {/* Mobile menu */}
         {isMenuOpen && (
           <nav className="md:hidden mt-4">
             <ul className="flex flex-col space-y-2">
@@ -68,7 +62,6 @@ export default function RectangleGlasses() {
           </nav>
         )}
       </header>
-
       <div className="pt-[10px]">
         <section className="relative py-12">
           <div className="absolute inset-0 bg-[#D5C5B4] left-[calc(-50vw+50%)] right-[calc(-50vw+50%)]"></div>

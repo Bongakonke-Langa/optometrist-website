@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "name": "Classic Round",
+      "description": "Classic round frames, perfect for a sophisticated look.",
+      "price": 129.99,
+      "image": "/spectacles/classic-round.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Modern Rectangle",
+      "description": "Modern rectangular design, ideal for a professional setting.",
+      "price": 149.99,
+      "image": "/spectacles/modern-rectangle.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Vintage Cat-Eye",
+        "description": "Stylish cat-eye shape, adding a touch of vintage glamour.",
+        "price": 139.99,
+        "image": "/spectacles/vintage-cat-eye.jpg"
+      },
+       {
+      "id": 4,
+      "name": "Bold Oversized",
+      "description": "Oversized frames for a bold, fashion-forward statement.",
+      "price": 159.99,
+      "image":"/spectacles/bold-oversized.jpg"
+    }
+]
+  
